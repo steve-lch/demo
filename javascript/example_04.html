@@ -51,10 +51,10 @@
 			<div class="album"></div>
 	  	</div>
         <script>
-			var album = document.querySelector('.album');
+			const album = document.querySelector('.album');
 		
-			var effect = function createDigiEffect(){
-				for (var i = 0; i < 300; i++){
+			let effect = function createDigiEffect(){
+				for (let i = 0; i < 300; i++){
 					(function(){
 						var digiEffect = document.createElement('span');
 						var fragment = document.createDocumentFragment();

@@ -92,21 +92,19 @@
 				
 				for (let i = 0; i < 6; i++){
 					   
-					var n = Math.floor(Math.random() * 48 + 1);	//generate random number
+					let n = Math.floor(Math.random() * 48 + 1);	//generate random number
 					
 					if ( lotteryArray.indexOf(n) === -1 ){	//check number repeat or not
 						lotteryArray.push(n);
-						var lotteryItem = document.createElement('li');
-						var lotteryItemCover = document.createElement('span')
-                        var lotteryNum = document.createTextNode(lotteryArray[i]);
+						const lotteryItem = document.createElement('li');
+						const lotteryItemCover = document.createElement('span')
+                        const lotteryNum = document.createTextNode(lotteryArray[i]);
                         lotteryItem.appendChild(lotteryNum);
 						lotteryItem.appendChild(lotteryItemCover);
                         lotteryList.appendChild(lotteryItem);
 						lotteryItemCover.style.animationDelay = 1 * i + 's';
 					}
-					else {
-						i--;
-					}
+					else return i--;
 				}
             };
             

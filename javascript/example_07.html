@@ -194,14 +194,10 @@
 							return;
 						}
 
-						if ( guessNum > secretNum ) {
-							higherSpan.textContent = guessNum;
-							return;
-						}
-						else if ( guessNum < secretNum ) {
-							lowerSpan.textContent = guessNum;
-							return;
-						}
+						if ( guessNum > secretNum ) return higherSpan.textContent = guessNum;
+						
+						else if ( guessNum < secretNum ) return lowerSpan.textContent = guessNum;
+			
 						else {
 							const keyArea = document.querySelector('.key');
 							keyArea.innerHTML = '<h4 class="key_title">終極密碼是 <span class="key_num">' + secretNum + '</span> !!</h4>';

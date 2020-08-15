@@ -94,15 +94,15 @@
             <button id="delete" type="button">Clear All</button>
         </div>
         <script>
-            var list = document.querySelector(".order_list");
-            var createBtn = document.getElementById("create");
-            var deleteBtn = document.getElementById("delete");
+            const list = document.querySelector(".order_list");
+            const createBtn = document.getElementById("create");
+            const deleteBtn = document.getElementById("delete");
             
         
             function createList(){
-				var fragment = document.createDocumentFragment();
-				var li = document.createElement("li");
-				var close = document.createElement("a");
+				const fragment = document.createDocumentFragment();
+				const li = document.createElement("li");
+				const close = document.createElement("a");
 				
 				li.className = "order_item";
 				close.className = "del_item";
@@ -119,11 +119,9 @@
             }
         
             function deleteAllList(){
-                var cL = list.children.length;
+                let cL = list.children.length;
             
-                if (cL < 1) {
-                    return alert ("No item anymore!!");
-                }
+                if (cL < 1) return alert ("No item anymore!!");
                 
                 list.innerHTML = '';
             };

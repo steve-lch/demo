@@ -63,8 +63,8 @@
 	  	</div>
         <script>
 			function cashSystem(){
-				var totalMoney = document.querySelector('.cash_number');
-				var mountingNum = Number(document.querySelector('.cash_number').textContent);
+				const totalMoney = document.querySelector('.cash_number');
+				let mountingNum = Number(document.querySelector('.cash_number').textContent);
 				
 				return function calcMoney(n){
 					mountingNum += n ;
@@ -87,10 +87,8 @@
 					sc.value = '';
 					return;
 				}
-				else if (addValue < 0) {
-					alert('加值金額必須大於0!!');
-					return;
-				}
+				else if (addValue < 0) return alert('加值金額必須大於0!!');
+				
 				else {
 					cashSystem()(addValue - spendValue);
 					ac.value = '';
